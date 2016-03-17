@@ -1,0 +1,84 @@
+
+
+# NOTE:  Python getting started
+# https://wiki.python.org/moin/BeginnersGuide
+# https://developers.google.com/edu/python/?csw=1
+
+#******* MAIN ENTRYPOINT **************
+# Gather our code in a main() function
+"""
+
+# NOTE:  Running main function in Python
+# http://www.artima.com/weblogs/viewpost.jsp?thread=4829
+# https://developers.google.com/edu/python/introduction
+
+def main(args):
+    print("Hello there {0}".format(sys.argv[1]))
+    # Command line args are in sys.argv[1], sys.argv[2] ...
+    # sys.argv[0] is the script name itself and can be ignored
+
+def main(args):
+
+    # print formatting in Python
+    # http://stackoverflow.com/questions/12382719/python-way-of-printing-with-format-or-percent-form
+    print("\n\nWELCOME {0}!   Processing file given in SECOND input argument if given.\n".format(args[1]))
+
+    # length of array in Python
+    # http://stackoverflow.com/questions/518021/getting-the-length-of-an-array-in-python
+    # if no filename supplied, enter it here
+    if ((len(args) < 3) or args[2] == None):
+        inputfile = "../data/TenIntegerArray.txt"
+    else:
+        inputfile = args[1]
+
+    processFile(inputfile)
+
+# NOTE:  entrypoint
+if __name__ == '__main__':
+    main(sys.argv)
+
+"""
+
+
+# NOTE:  how to determine which variable type got created!
+# print str(type(inputInts))
+
+# NOTE:  Read a file line-by-line in Python
+# http://stackoverflow.com/questions/8009882/how-to-read-large-file-line-by-line-in-python
+
+""" NOTE:
+The with statement handles opening and closing the file, including if an exception is raised in the inner block.
+The for line in f treats the file object f as an iterable, which automatically uses buffered IO and memory management
+so you don't have to worry about large files blowing up memory.
+"""
+
+"""
+NOTE:  parse lines into number array in Python; then Lists vs Arrays vs Tuples
+
+[ [int(x) for x in line.split()] for line in open(inputFile,'r') if line.strip() ]
+
+NOTE:  the following would create an array of arrays, but we only want a FLAT array!
+       inputInts.append([int(x) for x in line.split()])
+
+http://stackoverflow.com/questions/12271503/python-read-numbers-from-text-file-and-put-into-list
+http://stackoverflow.com/questions/9405322/python-array-v-list
+http://stackoverflow.com/questions/1708510/python-list-vs-tuple-when-to-use-each
+"""
+
+"""
+printing items from list to string Pythonic
+http://www.decalage.info/en/python/print_list
+"""
+
+# print formatting in Python
+# http://stackoverflow.com/questions/22617/format-numbers-to-strings-in-python
+
+# length of array in Python
+# http://stackoverflow.com/questions/518021/getting-the-length-of-an-array-in-python
+
+# PRIVATE METHODS and name-mangling (NO SUCH THING AS PRIVATE ACCESS RESTRICTION IN PYTHON)
+# https://docs.python.org/2/tutorial/classes.html#private-variables-and-class-local-references
+# essentially, private vars should be declared _pvtvar; or with a SINGLE leadint underscore
+# essentially, private methods not to be exposed in public API through import have SINGLE leading underscore:  _pvtNotImported (or SINGLE leading underscore)
+# essentially, private methods can be declared __pvtinitmethod; (or DOUBLE leading underscore, and is name_mangled by preprocessor to _classname__pvtinitmethod)
+#              which protects classes on same inheritance hierarchy from confusing calling overrided method names from sublclasses.

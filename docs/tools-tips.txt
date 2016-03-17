@@ -1,0 +1,27 @@
+# NOTE:  config Python project in PyCharm IDE
+"""
+https://www.jetbrains.com/pycharm/help/configuring-python-interpreter-for-a-project.html
+"""
+
+# NOTE:  Running Python code from PyCharm IDE
+"""
+http://stackoverflow.com/questions/16874046/running-a-module-from-the-pycharm-console
+"""
+
+# NOTE:  STOPPING in IDE
+"""
+https://www.jetbrains.com/pycharm/help/stopping-and-pausing-applications.html
+"""
+
+# TODO:  figure out env setup here
+#!/usr/bin/env python
+
+# VIM editor cut and paste
+"""
+https://www.google.com/search?q=cut+and+paste+line+in+vim&rlz=1C5AVSZ_enUS547US554&oq=cut+and+paste+line+in+vim&aqs=chrome..69i57.4031j0j7&sourceid=chrome&es_sm=119&ie=UTF-8
+"""
+# VIM editor UNDO
+"""
+https://www.google.com/search?q=undo+in+vim&rlz=1C5AVSZ_enUS547US554&oq=undo+in+vim&aqs=chrome..69i57j0l5.1775j0j8&sourceid=chrome&es_sm=119&ie=UTF-8
+"""
+
